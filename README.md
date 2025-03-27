@@ -39,7 +39,7 @@ FROM
  ORDER BY salary_year_avg DESC
  LIMIT 10;
  ```
- ![top_paying_jobs](assets\top_paying_jobs.png)
+ ![top_paying_jobs](assets/top_paying_jobs.png)
 
  ### 2 What are the skills required for these top paying roles?
  To get the top paying skills for the above jobs, I joined the job_postingS_fact table with skill_dim table so as to get the skill required for each of the roles.
