@@ -66,7 +66,7 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY salary_year_avg DESC
 LIMIT 10;
 ```
-![top_paying_skills](assets\top_paying_skills.png)
+![top_paying_skills](assets/top_paying_skills.png)
 
 ### 3 What are the most in-demand skills for my role?
 These are the most demanded for skills in data analysis roles as of 2023. For these, I got the total amount of skills required from the skils_job_dim table, and filtered for only data analysis roles from job_postings_fact_table. I then joined it to skills_dim table to get the skill names.
@@ -90,7 +90,7 @@ INNER JOIN top_demanded_skills ON top_demanded_skills.skill_id = skills_dim.skil
 ORDER BY demand_skills DESC
 LIMIT 5;
 ```
-![most_demanded_skills](assets\most_demanded_skills.png)
+![most_demanded_skills](assets/most_demanded_skills.png)
 
 ### 4 What are the top skills based on salary for my role?
 These are the skills which fall under data analysis roles that are the most paying in tems of the year's average salary and skill name.
@@ -133,8 +133,8 @@ INNER JOIN skills_dim
             demand_skills DESC
 LIMIT 20;
 ```
-![top_paying_skills_by_avg_salary](assets\top_paying_skills_by_avg_salary.png)
-![top_paying_skills_by_avg_salary_1](assets\top_paying_job_by_avg_salary_1.png)
+![top_paying_skills_by_avg_salary](assets/top_paying_skills_by_avg_salary.png)
+![top_paying_skills_by_avg_salary_1](assets/top_paying_job_by_avg_salary_1.png)
 
 ### 5 What are the most optimal skills (high demand and high paying) to learn?
 To find the most optimal skills, I joined the most_demanded_skills table (most demanded skills) and top_paying_skills_by_avg_table (top paid for skills). I then filtered the query based on skill count (demanded_skill) and salary_year_average, both in descending order.
@@ -175,8 +175,8 @@ INNER JOIN skills_dim
              demand_skills DESC
     LIMIT 25;
 ```
-![optimal_skills_1](assets\optimal_skills_1.png)
-![optimal_skills_2](assets\optimal_skills_2.png)
+![optimal_skills_1](assets/optimal_skills_1.png)
+![optimal_skills_2](assets/optimal_skills_2.png)
 # What I learned
 - Querying 
 - Data aggregations
