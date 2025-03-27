@@ -27,6 +27,9 @@ INNER JOIN top_skills_avg
     ON top_demanded_skills.skill_id = top_skills_avg.skill_id
 INNER JOIN skills_dim 
     ON top_demanded_skills.skill_id = skills_dim.skill_id
-    ORDER BY demand_skills DESC,
+    WHERE demand_skills>10
+    ORDER BY
+             demand_skills DESC,
              salary_year_avg DESC
+            
     LIMIT 25;
